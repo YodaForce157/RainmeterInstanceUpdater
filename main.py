@@ -14,7 +14,7 @@ def DeleteInstanceSections(configFile):
     for sections in curr_config.sections():
         if sections.startswith("INSTANCE-") == True:
             curr_config.remove_section(sections)
-    with open('config file', "w", encoding="utf-16") as fp:
+    with open(configFile, "w", encoding="utf-16") as fp:
         curr_config.write(fp)
         fp.close()
 
